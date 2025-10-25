@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 LABEL maintainer="ets-gitlab-runner team"
 RUN apt-get update && \
-    apt-get install -y jq unzip curl wget && \
+    apt-get install -y jq unzip curl wget openjdk17-jre && \
     rm -rf /var/lib/apt/lists/*
 
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
