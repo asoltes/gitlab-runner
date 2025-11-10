@@ -1,0 +1,11 @@
+stages:
+  - build
+  - test
+  - deploy
+.setup:
+  before_script:
+    - ping 8.8.8.8
+job:
+  stage: build
+  script:
+    - echo this is atest
